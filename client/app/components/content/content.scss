@@ -1,0 +1,173 @@
+@import '../../common/common';
+@import '../../common/mixins/mixins';
+@import '../../common/fonts/fonts';
+
+content {
+  .content {
+    width: 100%;
+    background-color: $background-content;
+    max-width: pxToRem(1600);
+    display: block;
+    margin: 2px auto 0 auto;
+
+    .wrapper {
+      max-width: pxToRem(960);
+      width: auto;
+      float: none;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+
+      .separator {
+        width: 100%;
+        height: 60px;
+      }
+
+      .story {
+        width: 100%;
+        height: 320px;
+
+        .half {
+          width: 50%;
+          height: 100%;
+          float: left;
+
+          &.mobile {
+            display: none;
+          }
+
+          .button {
+            width: 185px;
+            height: 50px;
+            background-color: $button-background;
+            border-radius: 7px;
+            border: 0;
+            color: $button-color;
+
+            &:active,
+            &:focus,
+            &:hover {
+              background-color: $button-hover;
+            }
+          }
+
+          .passion {
+            width: 50px;
+            height: 50px;
+            position: relative;
+            top: calc(-50% - 25px);
+            right: 0;
+            float: right;
+            margin-right: -25px;
+
+            img {
+              content: url(images/passion.png);
+            }
+          }
+
+          img {
+            &.story1 {
+              content: url(images/story1.png);
+            }
+
+            &.story2 {
+              content: url(images/story2.png);
+            }
+          }
+
+          section {
+            h1 {
+              @include font-myriad-pro-regular(30, 200);
+            }
+
+            p {
+              @include font-myriad-pro-regular(15, 200);
+              color: $content-p-color;
+              line-height: pxToRem(22);
+              margin-top: 30px;
+              margin-bottom: 36px;
+            }
+          }
+
+          &.right {
+            section {
+              text-align: right;
+            }
+
+            .button,
+            section {
+              margin-right: 40px;
+              float: right;
+            }
+          }
+
+          &.left {
+            .button,
+            section {
+              margin-left: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 992px) {
+  content {
+    .content {
+      .wrapper {
+        .separator {
+          height: 30px;
+        }
+
+        .story {
+          height: 640px;
+
+          .half {
+            width: 100%;
+            height: 50%;
+
+            img {
+              display: block;
+              margin: 0 auto;
+              max-width: 100%;
+            }
+
+            section {
+              max-width: 480px;
+              display: block;
+              padding: 0 15px;
+              margin: 0 auto !important;
+              float: none !important;
+              text-align: justify !important;
+
+              h1 {
+                font-size: 20px;
+                text-align: center;
+              }
+            }
+
+            .passion {
+              display: none;
+            }
+
+            .button {
+              display: block;
+              margin: 0 auto !important;
+              float: none !important;
+            }
+
+            &.no-mobile {
+              display: none;
+            }
+
+            &.mobile {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

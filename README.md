@@ -21,3 +21,16 @@ UI development team wish you luck, and we hope to have you working with us soon!
 
 Damián Muti,
 Head of UI.
+
+-----------------------------------------------------------------
+Done.
+
+For dependencies installation:
+
+-  npm install
+
+For SCSS compile & serve (on localhost:3000):
+
+-  gulp
+
+Jose Luis Casella

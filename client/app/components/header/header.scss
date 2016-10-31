@@ -1,0 +1,129 @@
+@import '../../common/common';
+@import '../../common/mixins/mixins';
+@import '../../common/fonts/fonts';
+
+.header {
+  width: 100%;
+  height: 520px;
+  background-color: $background-header;
+
+  .wrapper {
+    max-width: pxToRem(1600);
+    width: auto;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+
+    .background {
+      width: 100%;
+      height: 450px;
+      background-color: $background-header-background;
+      background-image: url(images/header-background.png);
+
+      img.making {
+        width: 244px;
+        height: 40px;
+        content: url(images/header-making.png);
+        padding-top: 56px;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      h1 {
+        font-size: 46px;
+        text-align: center;
+        margin-top: 100px;
+        color: $h1-header;
+        text-shadow: 0px 2px $shadow-header;
+      }
+
+      .ellipse {
+        width: 60px;
+        height: 60px;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        border-radius: 30px;  
+        background-color: $ellipse-background;
+        cursor: pointer;
+
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: $ellipse-background-hover;
+          outline: none;
+        }
+
+        img.radius {
+          width: 49px;
+          height: 49px;
+          content: url(images/ellipse.png);
+          padding-top: 6px;
+          padding-left: 1px;
+          display: block;
+          margin-right: auto;
+          margin-left: auto;
+        }
+      }
+
+      .social {
+        width: 300px;
+        height: 50px;
+        float: right;
+        position: relative;
+        right: 20px;
+        bottom: 13px;
+
+        .networks {
+          width: 100%;
+          height: 20px;
+          margin-bottom: 10px;
+
+          img {
+            width: 93px;
+            height: 20px;
+            content: url(images/header-networks.png);
+            float: right;
+            cursor: pointer;
+          }
+        }
+
+        p {
+          @include font-myriad-pro-regular(15, 200);
+          line-height: pxToRem(20);
+          text-align: right;
+          color: #FFFFFF;
+          margin: 0;
+        }
+      }
+    }
+
+    menu {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 992px) {
+  .header {
+    height: 450px;
+
+    .wrapper .background {
+      h1 {
+        font-size: 30px;
+      }
+
+      .ellipse {
+        display: none;
+      }
+
+      .social {
+        position: absolute;
+        top: 370px;
+      }
+    }
+  }
+}

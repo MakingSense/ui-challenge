@@ -1,0 +1,17 @@
+$base: 16;
+
+@mixin font-size($px:16) {
+  font-size: ($px/$base)+0rem;
+}
+
+@mixin font-family($family, $size:16, $weight:400) {
+  font-family: $family;
+  font-weight: $weight;
+  @include font-size($size);
+}
+
+@mixin font-myriad-pro-regular($size:16, $weight:400) {
+  $family: "Myriad Pro Regular", sans-serif;
+
+  @include font-family($family, $size, $weight);
+}

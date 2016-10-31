@@ -1,0 +1,106 @@
+{
+  "name": "MS",
+  "version": "0.0.1",
+  "description": "Cahllenge",
+  "main": "index.js",
+  "dependencies": {
+    "@angular/router": "^0.2.0",
+    "angular": "1.5.3",
+    "angular-animate": "^1.5.3",
+    "angular-sanitize": "^1.5.3",
+    "angular-ui-bootstrap": "^2.2.0",
+    "babel-runtime": "^6.9.2",
+    "core-js": "^2.4.1",
+    "ng-mask": "^3.0.12",
+    "ng-sortable": "^1.3.2",
+    "normalize.css": "^3.0.3",
+    "lodash": "^4.0.1"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.5.3",
+    "babel-core": "^6.11.4",
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-class-properties": "^6.11.5",
+    "babel-plugin-transform-es2015-modules-commonjs-simple": "^6.7.4",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-template": "^6.9.0",
+    "babel-types": "^6.11.1",
+    "brfs": "^1.4.3",
+    "chai": "^3.4.0",
+    "css-loader": "^0.23.1",
+    "del": "^2.2.0",
+    "diff": "^2.2.3",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
+    "font-loader": "^0.1.2",
+    "fs-walk": "0.0.1",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^2.1.0",
+    "gulp-gzip": "^1.2.0",
+    "gulp-iconfont": "^5.0.1",
+    "gulp-iconfont-css": "^2.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-stubby-server": "^0.2.0",
+    "gulp-tar": "^1.8.0",
+    "gulp-template": "^3.0.0",
+    "gulp-util": "^3.0.7",
+    "gulp.spritesmith": "^6.1.0",
+    "html-webpack-plugin": "^2.6.1",
+    "json-loader": "^0.5.4",
+    "json-proxy": "^0.9.1",
+    "karma": "^1.1.0",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-coverage": "^1.0.0",
+    "karma-mocha": "^1.1.1",
+    "karma-mocha-reporter": "^1.0.2",
+    "karma-sourcemap-loader": "^0.3.4",
+    "karma-webpack": "^1.5.1",
+    "mocha": "^2.5.3",
+    "ng-annotate-loader": "0.0.10",
+    "node-libs-browser": "^0.5.0",
+    "node-sass": "^3.4.2",
+    "pre-git": "^3.8.3",
+    "raw-loader": "^0.5.1",
+    "resolve-url": "^0.2.1",
+    "run-sequence": "^1.1.0",
+    "sass-loader": "^3.1.2",
+    "shelljs": "^0.7.4",
+    "style-loader": "^0.13.0",
+    "transform-loader": "^0.2.3",
+    "webpack": "^1.9.5",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-md5-hash": "0.0.4",
+    "webpack-stream": "^3.1.0",
+    "yargs": "^3.9.0"
+  },
+  "scripts": {
+    "test": "karma start",
+    "commit": "commit-wizard"
+  },
+  "keywords": [
+    "angular",
+    "webpack",
+    "es6"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "LicenseRef-LICENSE",
+  "config": {
+    "pre-git": {
+      "pre-commit": [
+        "gulp lint"
+      ],
+      "post-commit": [
+        "git status"
+      ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+    "extends": "eslint:recommended",
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "rules": {
+      "camelcase": 1,
+      "comma-dangle": 0,
+      "quotes": 0,
+      "semi": 1,
+      "no-console": 0
+    },
+    "globals": {
+      "jQuery":false,
+      "$":true,
+      "angular": 1,
+      "setTimeout": false,
+      "clearTimeout": false,
+      "console": false
+    },
+    "envs": [
+      "browser", "es6"
+    ]
+}
