@@ -1,7 +1,5 @@
 import angular from 'angular';
 
-import Constants from './app.constant';
-
 import App from './app';
 
 
